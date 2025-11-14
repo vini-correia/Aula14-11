@@ -1,0 +1,159 @@
+<!-- index.html com CSS interno -->
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Padaria & Café Doce Pão</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg: #fffaf3;
+      --accent: #c86b39;
+      --muted: #6b6b6b;
+      --card: #fff;
+      --radius: 12px;
+      --container-width: 1100px;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:#222;line-height:1.5}
+    .container{max-width:var(--container-width);margin:0 auto;padding:1rem}
+
+    .site-header{background:linear-gradient(90deg, rgba(200,107,57,0.12), transparent);padding:1rem 0}
+    .brand h1{margin:0;font-size:1.25rem}
+    .brand h1 span{color:var(--accent);font-weight:700}
+    .tagline{margin:0;font-size:0.9rem;color:var(--muted)}
+    .main-nav{display:flex;gap:0.75rem;align-items:center}
+    .main-nav a{text-decoration:none;padding:0.5rem 0.6rem;border-radius:8px;color:inherit}
+    .main-nav .btn{background:var(--accent);color:#fff;padding:0.5rem 0.9rem}
+
+    .hero{padding:2.5rem 0}
+    .hero-inner{display:flex;gap:2rem;align-items:center}
+    .hero-text h2{font-size:1.8rem;margin:0 0 0.5rem}
+    .hero-text p{margin:0 0 1rem;color:var(--muted)}
+    .cta{display:inline-block;padding:0.6rem 1rem;border-radius:8px;background:var(--accent);color:#fff;text-decoration:none}
+    .image-placeholder{width:300px;height:200px;border-radius:12px;background:linear-gradient(135deg,#ffe7d0,#ffd6b8);display:flex;align-items:center;justify-content:center;color:var(--muted);font-weight:600}
+
+    .cardapio{padding:1.5rem 0}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-top:1rem}
+    .card{background:var(--card);padding:1rem;border-radius:var(--radius);box-shadow:0 6px 18px rgba(0,0,0,0.06)}
+    .card h4{margin:0 0 0.25rem}
+    .price{font-weight:700;margin-top:0.75rem}
+
+    .sobre{padding:1.5rem 0}
+    .lista-icones{display:flex;gap:1rem;padding:0;margin:1rem 0 0;list-style:none}
+    .lista-icones li{background:rgba(200,107,57,0.08);padding:0.6rem 0.8rem;border-radius:8px}
+
+    .contato{padding:1.5rem 0}
+    .form-contato{display:grid;gap:0.6rem;max-width:540px}
+    .form-contato input,.form-contato textarea{width:100%;padding:0.6rem;border-radius:8px;border:1px solid #e6e6e6}
+    .btn{border:none;cursor:pointer;border-radius:8px;padding:0.6rem 0.9rem}
+
+    .site-footer{padding:1rem 0;text-align:center;color:var(--muted);font-size:0.9rem}
+
+    @media (max-width:800px){
+      .hero-inner{flex-direction:column}
+      .image-placeholder{width:100%;height:180px}
+      .main-nav{gap:0.4rem}
+      .brand h1{font-size:1rem}
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">
+        <h1>Padaria & Café <span>Doce Pão</span></h1>
+        <p class="tagline">Pães artesanais e cafés quentinhos</p>
+      </div>
+      <nav class="main-nav">
+        <a href="#home">Início</a>
+        <a href="#cardapio">Cardápio</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato" class="btn">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h2>Comece o dia com sabor</h2>
+          <p>Padaria artesanal com ingredientes frescos e receitas caseiras. Venha provar nossos pães, doces e cafés especiais.</p>
+          <a href="#cardapio" class="cta">Ver cardápio</a>
+        </div>
+        <div class="hero-image" aria-hidden="true">
+          <div class="image-placeholder">Imagem</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cardapio" class="cardapio">
+      <div class="container">
+        <h3>Nosso Cardápio</h3>
+        <p class="sub">Pães, salgados, doces e bebidas — opções para todos os gostos</p>
+        <div class="cards">
+          <article class="card">
+            <h4>Pães</h4>
+            <p>French, integral, ciabatta e mais.</p>
+            <p class="price">A partir de R$ 3,50</p>
+          </article>
+          <article class="card">
+            <h4>Doces</h4>
+            <p>Croissants, bolos por fatia e tortas caseiras.</p>
+            <p class="price">A partir de R$ 4,50</p>
+          </article>
+          <article class="card">
+            <h4>Cafés & Bebidas</h4>
+            <p>Espresso, cappuccino, cappuccino gelado e chás.</p>
+            <p class="price">A partir de R$ 5,00</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre" class="sobre">
+      <div class="container">
+        <h3>Sobre Nós</h3>
+        <p>A Padaria Doce Pão nasceu da paixão por fazer pães e reunir pessoas. Produzimos diariamente com fermentação natural e receitas familiares.</p>
+        <ul class="lista-icones">
+          <li>Ingredientes frescos</li>
+          <li>Receitas artesanais</li>
+          <li>Opções vegetarianas</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contato" class="contato">
+      <div class="container">
+        <h3>Contato</h3>
+        <p>Av. Exemplo, 123 — Centro · (11) 91234-5678 · aberto: 06:00 - 19:30</p>
+        <form class="form-contato" onsubmit="event.preventDefault(); alert('Formulário de contato (exemplo)');">
+          <label>
+            Nome
+            <input type="text" name="nome" placeholder="Seu nome" required>
+          </label>
+          <label>
+            Mensagem
+            <textarea name="mensagem" placeholder="Sua mensagem" required></textarea>
+          </label>
+          <button type="submit" class="btn">Enviar</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="ano"></span> Padaria & Café Doce Pão — Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('ano').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
